@@ -8,7 +8,7 @@ export const stripePromise = loadStripe(
 
 // Server-side Stripe
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-11-20.acacia', // Using stable API version
+  apiVersion: '2024-09-30.acacia',
 });
 
 // Product configuration matching ArthroGel structure
