@@ -15,7 +15,9 @@
       "Bash(gh:*)",
       "Bash(npm run build:*)",
       "Bash(git push:*)",
-      "Bash(npx vercel:*)"
+      "Bash(npx vercel:*)",
+      "Bash(cat:*)",
+      "Bash(xxd:*)"
     ],
     "deny": [],
     "ask": []

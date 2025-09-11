@@ -111,12 +111,14 @@ function CartContent() {
       const stripe = (await import('@/lib/stripe')).stripePromise;
       const stripeInstance = await stripe;
       
-      if (stripeInstance) {
-        const { error } = await stripeInstance.redirectToCheckout({ sessionId });
-        if (error) {
-          console.error('Stripe redirect error:', error);
-          alert('Something went wrong. Please try again.');
-        }
+      if (!stripeInstance) {
+        throw new Error('Stripe failed to initialize. Please check your publishable key.');
+      }
+      
+      const { error } = await stripeInstance.redirectToCheckout({ sessionId });
+      if (error) {
+        console.error('Stripe redirect error:', error);
+        throw new Error(`Stripe redirect failed: ${error.message}`);
       }
     } catch (error) {
       console.error('Checkout error:', error);
