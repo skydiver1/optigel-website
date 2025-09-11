@@ -36,6 +36,14 @@ export const products = {
     salePrice: 59.70,
     priceId: process.env.STRIPE_PRICE_ID_SIX_PACK!,
     description: 'Best value - maximum savings for long-term comfort'
+  },
+  cbdPatches: {
+    name: 'High Strength (16mg) CBD Patches - 18 days supply',
+    quantity: 18,
+    originalPrice: 29.95,
+    salePrice: 14.95,
+    priceId: process.env.STRIPE_PRICE_ID_CBD_PATCHES!,
+    description: 'High strength 16mg CBD patches for enhanced pain relief'
   }
 } as const;
 

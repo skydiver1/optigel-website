@@ -3,33 +3,53 @@ import { stripe, products, ProductKey } from '@/lib/stripe';
 
 export async function POST(request: NextRequest) {
   try {
-    const { productKey }: { productKey: ProductKey } = await request.json();
-    
-    if (!productKey || !products[productKey]) {
+    const body = await request.json();
+    const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL;
+
+    let lineItems: any[] = [];
+
+    // Handle legacy single product requests
+    if (body.productKey) {
+      const { productKey }: { productKey: ProductKey } = body;
+      
+      if (!productKey || !products[productKey]) {
+        return NextResponse.json(
+          { error: 'Invalid product selection' },
+          { status: 400 }
+        );
+      }
+
+      const product = products[productKey];
+      lineItems = [{
+        price: product.priceId,
+        quantity: 1,
+      }];
+    } 
+    // Handle new cart-based requests with multiple items
+    else if (body.items) {
+      const { items } = body;
+      
+      lineItems = items.map((item: any) => ({
+        price: item.priceId,
+        quantity: item.quantity || 1,
+      }));
+    } else {
       return NextResponse.json(
-        { error: 'Invalid product selection' },
+        { error: 'Invalid request format' },
         { status: 400 }
       );
     }
 
-    const product = products[productKey];
-    const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL;
-
     // Create Stripe checkout session
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
-      line_items: [
-        {
-          price: product.priceId,
-          quantity: 1,
-        },
-      ],
+      line_items: lineItems,
       mode: 'payment',
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/#pricing`,
+      cancel_url: `${origin}/cart`,
       metadata: {
-        productKey,
-        tubes: product.tubes.toString(),
+        source: body.productKey ? 'legacy' : 'cart',
+        ...(body.productKey && { productKey: body.productKey }),
       },
       shipping_address_collection: {
         allowed_countries: ['GB'], // UK only initially

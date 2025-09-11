@@ -40,8 +40,8 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li><Link href="#about" className="text-gray-400 hover:text-white transition-colors">About Opti-15</Link></li>
-              <li><Link href="#ingredients" className="text-gray-400 hover:text-white transition-colors">Ingredients</Link></li>
-              <li><Link href="#reviews" className="text-gray-400 hover:text-white transition-colors">Customer Reviews</Link></li>
+              <li><Link href="/#ingredients" className="text-gray-400 hover:text-white transition-colors">Ingredients</Link></li>
+              <li><Link href="/#reviews" className="text-gray-400 hover:text-white transition-colors">Customer Reviews</Link></li>
               <li><Link href="#faq" className="text-gray-400 hover:text-white transition-colors">FAQ</Link></li>
               <li><Link href="#pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
             </ul>
@@ -55,7 +55,6 @@ export default function Footer() {
               <li><Link href="/shipping" className="text-gray-400 hover:text-white transition-colors">Shipping Info</Link></li>
               <li><Link href="/returns" className="text-gray-400 hover:text-white transition-colors">Returns & Refunds</Link></li>
               <li><Link href="/guarantee" className="text-gray-400 hover:text-white transition-colors">90-Day Guarantee</Link></li>
-              <li><Link href="/track-order" className="text-gray-400 hover:text-white transition-colors">Track Your Order</Link></li>
             </ul>
           </div>
 
@@ -66,14 +65,14 @@ export default function Footer() {
               <div>
                 <p className="font-semibold text-white">Medical Technology Ltd</p>
                 <p className="text-sm">
-                  [Placeholder Address]<br />
+                  Express Park, Southampton<br />
                   London, UK<br />
-                  [Placeholder Postcode]
+                  SO14 0HH
                 </p>
               </div>
               <div>
                 <p>Email: support@optigel.co.uk</p>
-                <p>Phone: 0800 123 4567</p>
+                <p>Phone: 0800 470 0316</p>
               </div>
             </div>
           </div>
