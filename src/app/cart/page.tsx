@@ -22,7 +22,7 @@ function CartContent() {
     const selectedProduct = searchParams.get('selectedProduct') || 'single';
     const includeUpsell = searchParams.get('upsell') === 'true';
 
-    // Product mapping based on the pricing tiers
+    // Product mapping based on the pricing tiers - using hardcoded values for client-side
     const productMap: { [key: string]: CartItem } = {
       single: {
         id: 'single',
@@ -30,7 +30,7 @@ function CartContent() {
         price: 19.95,
         originalPrice: 24.95,
         image: '/01_3014.jpg',
-        priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_SINGLE || 'price_1S68ZEJIj1H8x0NCn7eWEeIs'
+        priceId: 'price_1S68ZEJIj1H8x0NCn7eWEeIs'
       },
       triple: {
         id: 'triple',
@@ -38,7 +38,7 @@ function CartContent() {
         price: 37.45,
         originalPrice: 74.85,
         image: '/01_3014.jpg',
-        priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_TRIPLE || 'price_1S68XWJIj1H8x0NCUPGAR5Yg'
+        priceId: 'price_1S68XWJIj1H8x0NCUPGAR5Yg'
       },
       'six-pack': {
         id: 'six-pack',
@@ -46,7 +46,7 @@ function CartContent() {
         price: 59.70,
         originalPrice: 149.70,
         image: '/01_3014.jpg',
-        priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_SIX_PACK || 'price_1S68YiJIj1H8x0NC92OKKebk'
+        priceId: 'price_1S68YiJIj1H8x0NC92OKKebk'
       }
     };
 
@@ -60,7 +60,7 @@ function CartContent() {
         price: 14.95,
         originalPrice: 29.95,
         image: '/axxess16mg.webp',
-        priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_CBD_PATCHES || 'price_1RRBC9JIj1H8x0NC0pio4LsX'
+        priceId: 'price_1RRBC9JIj1H8x0NC0pio4LsX'
       });
     }
 
