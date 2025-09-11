@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import { stripe, products, ProductKey } from '@/lib/stripe';
 
 export async function POST(request: NextRequest) {
+  let lineItems: any[] = [];
+  
   try {
     const body = await request.json();
     const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL;
-
-    let lineItems: any[] = [];
 
     // Handle legacy single product requests
     if (body.productKey) {
