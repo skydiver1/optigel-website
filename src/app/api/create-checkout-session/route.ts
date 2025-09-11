@@ -7,6 +7,20 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL;
+    
+    // Debug logging for production troubleshooting
+    console.log('Checkout request received:', {
+      body,
+      origin,
+      hasSecretKey: !!process.env.STRIPE_SECRET_KEY,
+      hasPublishableKey: !!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
+      priceIds: {
+        single: process.env.STRIPE_PRICE_ID_SINGLE,
+        triple: process.env.STRIPE_PRICE_ID_TRIPLE,
+        sixPack: process.env.STRIPE_PRICE_ID_SIX_PACK,
+        cbdPatches: process.env.STRIPE_PRICE_ID_CBD_PATCHES,
+      }
+    });
 
     // Handle legacy single product requests
     if (body.productKey) {
