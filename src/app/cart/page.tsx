@@ -108,8 +108,8 @@ function CartContent() {
       }
 
       // Redirect to Stripe Checkout
-      const stripe = (await import('@/lib/stripe')).stripePromise;
-      const stripeInstance = await stripe;
+      const { stripePromise } = await import('@/lib/stripe-client');
+      const stripeInstance = await stripePromise;
       
       if (!stripeInstance) {
         throw new Error('Stripe failed to initialize. Please check your publishable key.');
