@@ -30,7 +30,7 @@ function CartContent() {
         price: 19.95,
         originalPrice: 24.95,
         image: '/01_3014.jpg',
-        priceId: 'price_placeholder_single'
+        priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_SINGLE || 'price_1S68ZEJIj1H8x0NCn7eWEeIs'
       },
       triple: {
         id: 'triple',
@@ -38,7 +38,7 @@ function CartContent() {
         price: 37.45,
         originalPrice: 74.85,
         image: '/01_3014.jpg',
-        priceId: 'price_placeholder_triple'
+        priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_TRIPLE || 'price_1S68XWJIj1H8x0NCUPGAR5Yg'
       },
       'six-pack': {
         id: 'six-pack',
@@ -46,7 +46,7 @@ function CartContent() {
         price: 59.70,
         originalPrice: 149.70,
         image: '/01_3014.jpg',
-        priceId: 'price_placeholder_six_pack'
+        priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_SIX_PACK || 'price_1S68YiJIj1H8x0NC92OKKebk'
       }
     };
 
@@ -60,7 +60,7 @@ function CartContent() {
         price: 14.95,
         originalPrice: 29.95,
         image: '/axxess16mg.webp',
-        priceId: process.env.STRIPE_PRICE_ID_CBD_PATCHES || 'price_placeholder_cbd_patches'
+        priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_CBD_PATCHES || 'price_1RRBC9JIj1H8x0NC0pio4LsX'
       });
     }
 
