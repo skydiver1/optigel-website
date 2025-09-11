@@ -106,7 +106,7 @@ src/
 - **Product**: Opti-15 Gel
 - **Domain**: optigel.co.uk
 - **Support**: support@optigel.co.uk
-- **Phone**: 0800 123 4567
+- **Phone**: 0800 470 0316
 
 ## Features Implemented
 

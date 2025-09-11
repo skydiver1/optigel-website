@@ -15,40 +15,40 @@ export default function TestimonialsSection() {
 
   const testimonials: Testimonial[] = [
     {
-      name: "Barry",
+      name: "Sarah",
       text: "Really good gel for massaging painful joints. Useful for pain relief and sore joints.",
       verified: true,
-      image: "/headshot-barry.svg"
+      image: "/face-1.jpg"
     },
     {
-      name: "Jonathan", 
+      name: "Dee", 
       text: "I suffer with arthritis and Opti-15 Gel helps me with my knee, shoulder and elbow pain.",
       verified: true,
-      image: "/headshot-jonathan.svg"
+      image: "/face-2.jpg"
     },
     {
       name: "Kelly",
       text: "Ever since I damaged my knee, I've been going to physio. Although not a cure, Opti-15 Gel has really helped my symptoms.",
       verified: true,
-      image: "/headshot-kelly.svg"
+      image: "/face-3.jpg"
     },
     {
-      name: "Margaret",
+      name: "Ian",
       text: "I was skeptical at first, but after just three days of using Opti-15 Gel on my knee, I could feel a real difference.",
       verified: true,
-      image: "/headshot-margaret.svg"
+      image: "/face-4.jpg"
     },
     {
       name: "David",
       text: "As a construction worker, muscle aches are part of daily life. This gel has been a game changer for my recovery.",
       verified: true,
-      image: "/headshot-david.svg"
+      image: "/face-5.jpg"
     },
     {
-      name: "Sarah",
+      name: "Oliver",
       text: "I've struggled with joint pain for years. Opti-15 Gel is the only thing that's given me real, lasting relief.",
       verified: true,
-      image: "/headshot-sarah.svg"
+      image: "/face-6.jpg"
     }
   ];
 

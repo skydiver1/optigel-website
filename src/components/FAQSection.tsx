@@ -140,7 +140,7 @@ export default function FAQSection() {
                   </svg>
                 </div>
                 <h4 className="font-bold text-gray-800 mb-2">Phone Support</h4>
-                <p className="text-gray-600">0800 123 4567</p>
+                <p className="text-gray-600">0800 470 0316</p>
                 <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM GMT</p>
               </div>
             </div>

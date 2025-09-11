@@ -144,8 +144,8 @@ function SuccessContent() {
               <a href="mailto:support@optigel.co.uk" className="text-red-600 hover:text-red-700 font-semibold">
                 support@optigel.co.uk
               </a>
-              <a href="tel:08001234567" className="text-red-600 hover:text-red-700 font-semibold">
-                0800 123 4567
+              <a href="tel:08004700316" className="text-red-600 hover:text-red-700 font-semibold">
+                0800 470 0316
               </a>
             </div>
           </div>

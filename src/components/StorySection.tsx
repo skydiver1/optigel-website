@@ -28,18 +28,14 @@ export default function StorySection() {
           </div>
 
           {/* Right content - Product image */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg p-8 flex items-center justify-center min-h-[400px]">
-              <div className="transform rotate-12">
-                <Image
-                  src="/01_3014.jpg"
-                  alt="Opti-15 Gel Tube"
-                  width={200}
-                  height={300}
-                  className="object-contain drop-shadow-2xl"
-                />
-              </div>
-            </div>
+          <div className="relative flex items-center justify-center">
+            <Image
+              src="/1755817299.png"
+              alt="Opti-15 Gel Story"
+              width={400}
+              height={400}
+              className="object-contain rounded-lg"
+            />
           </div>
         </div>
       </div>

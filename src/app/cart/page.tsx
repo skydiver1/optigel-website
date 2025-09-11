@@ -37,7 +37,7 @@ function CartContent() {
         name: '2 - Buy 2 Get 1 FREE',
         price: 37.45,
         originalPrice: 74.85,
-        image: '/01_3014.jpg',
+        image: '/3pack.png',
         priceId: 'price_1S68XWJIj1H8x0NCUPGAR5Yg'
       },
       'six-pack': {
@@ -45,7 +45,7 @@ function CartContent() {
         name: '3 - Buy 3 Get 3 FREE',
         price: 59.70,
         originalPrice: 149.70,
-        image: '/01_3014.jpg',
+        image: '/6pack.png',
         priceId: 'price_1S68YiJIj1H8x0NC92OKKebk'
       }
     };
@@ -246,42 +246,47 @@ function CartContent() {
                 <p className="text-xs text-gray-500 mb-3">🔒 Secure payment powered by Stripe</p>
                 <div className="flex justify-center space-x-3">
                   {/* Visa */}
-                  <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center shadow-sm">
-                    <svg width="40" height="13" viewBox="0 0 40 13" fill="none">
-                      <path d="M18.5 0.5L16.8 12.5H14.2L15.9 0.5H18.5Z" fill="#1A1F71"/>
-                      <path d="M29.2 0.8C28.7 0.6 27.8 0.4 26.6 0.4C23.9 0.4 22 2 22 4.3C22 6 23.4 6.9 24.4 7.5C25.5 8.1 25.9 8.5 25.9 9C25.9 9.8 24.9 10.2 24 10.2C22.8 10.2 22.2 10 21.3 9.6L20.9 9.4L20.5 11.9C21.1 12.2 22.2 12.4 23.4 12.4C26.3 12.4 28.1 10.8 28.1 8.4C28.1 7.1 27.3 6.1 25.5 5.4C24.6 4.9 24.1 4.5 24.1 3.9C24.1 3.4 24.7 2.9 25.9 2.9C26.8 2.9 27.5 3.1 28 3.3L28.3 3.4L28.7 1L29.2 0.8Z" fill="#1A1F71"/>
-                      <path d="M35.3 0.5H33.2C32.4 0.5 31.8 0.7 31.4 1.4L26.5 12.5H29.4L30 11H33.4L33.7 12.5H36.2L35.3 0.5ZM30.8 8.7L32.3 5.2L32.9 8.7H30.8Z" fill="#1A1F71"/>
-                      <path d="M12.1 0.5L9.6 8.9L9.3 7.4C8.8 5.8 7.3 4.1 5.6 3.2L7.8 12.5H10.8L15.1 0.5H12.1Z" fill="#1A1F71"/>
-                      <path d="M7.1 0.5H2.1L2 0.8C5.4 1.7 7.5 4 8.2 6.7L6.9 1.3C6.7 0.7 6.2 0.5 5.6 0.5H7.1Z" fill="#FFBC00"/>
-                    </svg>
+                  <div className="w-12 h-8 bg-white rounded flex items-center justify-center">
+                    <Image
+                      src="/visa.png"
+                      alt="Visa"
+                      width={40}
+                      height={25}
+                      className="object-contain"
+                    />
                   </div>
                   
                   {/* Mastercard */}
-                  <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center shadow-sm">
-                    <svg width="36" height="22" viewBox="0 0 36 22" fill="none">
-                      <circle cx="14" cy="11" r="10" fill="#EB001B"/>
-                      <circle cx="22" cy="11" r="10" fill="#FF5F00"/>
-                      <path d="M18 4.464C19.602 5.806 20.6 7.787 20.6 10C20.6 12.213 19.602 14.194 18 15.536C16.398 14.194 15.4 12.213 15.4 10C15.4 7.787 16.398 5.806 18 4.464Z" fill="#FF5F00"/>
-                    </svg>
-                  </div>
-                  
-                  {/* American Express */}
-                  <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center shadow-sm">
-                    <svg width="36" height="14" viewBox="0 0 36 14" fill="none">
-                      <rect width="36" height="14" fill="#006FCF" rx="2"/>
-                      <path d="M6.5 3.5H8.5L9 4.5L9.5 3.5H14V4.2L14.5 3.5H16.5L17 4.2V3.5H22V10.5H20V9.8L19.5 10.5H17.5L17 9.8V10.5H11.5L11.2 9.8H10.3L10 10.5H8L9.5 7L8 3.5H10L10.5 6.2L11 3.5H6.5V10.5H4.5V3.5Z" fill="white"/>
-                      <path d="M7.5 4.5V9.5H9L10.2 6.5V9.5H11.5V7.5H12.5V9.5H13V4.5H11L10 7L9 4.5H7.5Z" fill="#006FCF"/>
-                    </svg>
+                  <div className="w-12 h-8 bg-white rounded flex items-center justify-center">
+                    <Image
+                      src="/master.png"
+                      alt="Mastercard"
+                      width={40}
+                      height={25}
+                      className="object-contain"
+                    />
                   </div>
                   
                   {/* PayPal */}
-                  <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center shadow-sm">
-                    <svg width="32" height="12" viewBox="0 0 32 12" fill="none">
-                      <path d="M3 2H6.5C7.9 2 9 3.1 9 4.5C9 6.2 7.6 7.5 5.9 7.5H4.8L4.5 9.5H3L3 2ZM4.8 6.2H5.8C6.8 6.2 7.5 5.5 7.5 4.5C7.5 3.5 6.8 2.8 5.8 2.8H4.8L4.8 6.2Z" fill="#003087"/>
-                      <path d="M10.5 2H14C15.4 2 16.5 3.1 16.5 4.5C16.5 6.2 15.1 7.5 13.4 7.5H12.3L12 9.5H10.5L10.5 2ZM12.3 6.2H13.3C14.3 6.2 15 5.5 15 4.5C15 3.5 14.3 2.8 13.3 2.8H12.3L12.3 6.2Z" fill="#0070BA"/>
-                      <path d="M18 2.2C18.5 2.1 19.2 2 20 2C21.2 2 22 2.3 22.5 2.8C23 3.3 23.2 4 23.2 4.8C23.2 6.8 21.8 8 19.8 8C19.4 8 19.1 8 18.9 7.9L18.6 9.5H17.1L18 2.2ZM18.5 6.8C18.7 6.9 19 6.9 19.3 6.9C20.5 6.9 21.3 6.2 21.3 5.1C21.3 4.4 20.8 3.9 19.9 3.9C19.6 3.9 19.3 3.9 19.1 4L18.5 6.8Z" fill="#0070BA"/>
-                      <path d="M24 2.2C24.5 2.1 25.2 2 26 2C27.2 2 28 2.3 28.5 2.8C29 3.3 29.2 4 29.2 4.8C29.2 6.8 27.8 8 25.8 8C25.4 8 25.1 8 24.9 7.9L24.6 9.5H23.1L24 2.2ZM24.5 6.8C24.7 6.9 25 6.9 25.3 6.9C26.5 6.9 27.3 6.2 27.3 5.1C27.3 4.4 26.8 3.9 25.9 3.9C25.6 3.9 25.3 3.9 25.1 4L24.5 6.8Z" fill="#0070BA"/>
-                    </svg>
+                  <div className="w-12 h-8 bg-white rounded flex items-center justify-center">
+                    <Image
+                      src="/paypal.png"
+                      alt="PayPal"
+                      width={40}
+                      height={25}
+                      className="object-contain"
+                    />
+                  </div>
+                  
+                  {/* Apple Pay */}
+                  <div className="w-12 h-8 bg-white rounded flex items-center justify-center">
+                    <Image
+                      src="/applepay.png"
+                      alt="Apple Pay"
+                      width={40}
+                      height={25}
+                      className="object-contain"
+                    />
                   </div>
                 </div>
               </div>
