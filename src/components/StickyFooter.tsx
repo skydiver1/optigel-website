@@ -1,10 +1,10 @@
 'use client';
 
 export default function StickyFooter() {
-  const scrollToUpsell = () => {
-    const upsellSection = document.getElementById('upsell');
-    if (upsellSection) {
-      upsellSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -18,7 +18,7 @@ export default function StickyFooter() {
           </div>
           
           <button
-            onClick={scrollToUpsell}
+            onClick={scrollToPricing}
             className="bg-white text-red-600 font-bold py-2 px-6 rounded-full shadow-lg hover:bg-gray-100 transition-colors text-sm"
           >
             ORDER NOW

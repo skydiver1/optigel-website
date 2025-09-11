@@ -47,7 +47,7 @@ export default function HowItWorksSection() {
             </p>
 
             <div className="mt-8">
-              <a href="#upsell" className="btn-primary">
+              <a href="#pricing" className="btn-primary">
                 ORDER OPTI-15 GEL
               </a>
             </div>

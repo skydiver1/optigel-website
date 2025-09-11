@@ -22,7 +22,7 @@ export default function StorySection() {
               </p>
               
               <p>
-                This was picked up by Tower Health a company that believes in using only <strong>high quality natural ingredients</strong>, that do not contain artificial perfumes, dyes, preservatives or genetically modified raw materials. Jiří and Tower Health both share this <strong>love of health and wellness through nature</strong> and instead of focusing on cheap alternatives to short term relief, we focus on using only the <strong>highest quality ingredients</strong> and these are truly reflected in the quality and efficacy of the products.
+                This was picked up by Medical Technology a company that believes in using only <strong>high quality natural ingredients</strong>, that do not contain artificial perfumes, dyes, preservatives or genetically modified raw materials. Jiří and Medical Technology both share this <strong>love of health and wellness through nature</strong> and instead of focusing on cheap alternatives to short term relief, we focus on using only the <strong>highest quality ingredients</strong> and these are truly reflected in the quality and efficacy of the products.
               </p>
             </div>
           </div>

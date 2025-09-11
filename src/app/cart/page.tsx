@@ -214,9 +214,16 @@ function CartContent() {
               <button
                 onClick={handleCheckout}
                 disabled={isLoading}
-                className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white font-bold py-3 px-6 rounded-lg transition-colors mb-4"
+                className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white font-bold py-3 px-6 rounded-lg transition-colors mb-3"
               >
                 {isLoading ? 'Processing...' : 'Proceed to Checkout'}
+              </button>
+
+              <button
+                onClick={() => window.location.href = '/'}
+                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-6 rounded-lg transition-colors mb-4"
+              >
+                ← Continue Shopping
               </button>
 
               <div className="space-y-2 text-xs text-gray-600">

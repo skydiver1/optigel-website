@@ -24,7 +24,7 @@ export default function HeroSection() {
             </div>
 
             <div className="mt-6">
-              <a href="#upsell" className="btn-primary text-center inline-block text-sm px-6 py-3">
+              <a href="#pricing" className="btn-primary text-center inline-block text-sm px-6 py-3">
                 ORDER OPTI-15 GEL
               </a>
             </div>
