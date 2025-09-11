@@ -23,6 +23,17 @@ export default function HeroSection() {
               </div>
             </div>
 
+            {/* Hero image */}
+            <div className="mt-6 mb-6 hidden lg:block">
+              <Image
+                src="/01_3014.jpg"
+                alt="Opti-15 Gel in action"
+                width={200}
+                height={150}
+                className="w-48 rounded-lg shadow-lg"
+              />
+            </div>
+
             <div className="mt-6">
               <a href="#pricing" className="btn-primary text-center inline-block text-sm px-6 py-3">
                 ORDER OPTI-15 GEL
@@ -31,13 +42,13 @@ export default function HeroSection() {
           </div>
 
           {/* Right content - GET OPTI-15 GEL box exactly like ArthroGel */}
-          <div className="relative w-full md:max-w-sm mx-auto md:mx-0">
+          <div className="relative w-full md:max-w-lg mx-auto md:ml-auto md:mr-0">
             <div className="bg-gray-100 p-4 md:p-6 rounded-lg">
               <div className="text-center">
                 {/* Product video */}
                 <div className="mb-4">
                   <video 
-                    className="w-full h-auto rounded object-contain mx-auto max-w-none md:max-w-xs"
+                    className="w-full h-auto rounded object-contain mx-auto"
                     autoPlay
                     muted
                     loop

@@ -18,9 +18,9 @@ export default function IngredientsSection() {
       description: "Help reduce swelling and improve blood circulation - making it effective in treating various conditions such as chronic venous insufficiency and varicose veins."
     },
     {
-      name: "PEPPERMINT",
+      name: "POMELO",
       image: "/Peppermint.webp",
-      description: "Peppermint is one of the most popular scents and it has potent effects. It's been to be anti-painful and anti-fatigue and is a known muscle relaxer with pain relief."
+      description: "Pomelo oil is rich in d-limonene, which can have light antioxidant and antimicrobial effects and make the gel feel invigorating."
     },
     {
       name: "COMFREY ROOT",
