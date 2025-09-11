@@ -93,10 +93,18 @@ function CartContent() {
         }),
       });
 
-      const { sessionId } = await response.json();
+      const data = await response.json();
+
+      if (!response.ok) {
+        // API returned an error
+        console.error('API Error:', data);
+        throw new Error(data.error || `API Error: ${response.status}`);
+      }
+
+      const { sessionId } = data;
 
       if (!sessionId) {
-        throw new Error('Failed to create checkout session');
+        throw new Error('No session ID returned from Stripe');
       }
 
       // Redirect to Stripe Checkout
