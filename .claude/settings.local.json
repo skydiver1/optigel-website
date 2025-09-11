@@ -11,7 +11,9 @@
       "WebSearch",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:www.slaterjohn.com)",
-      "WebFetch(domain:www.iconpacks.net)"
+      "WebFetch(domain:www.iconpacks.net)",
+      "Bash(gh:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []
