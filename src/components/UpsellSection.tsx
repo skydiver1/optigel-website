@@ -10,12 +10,35 @@ export default function UpsellSection() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check for selected product in sessionStorage
+    // Check for selected product in sessionStorage on mount
     const product = sessionStorage.getItem('selectedProduct');
     if (product) {
       setSelectedProduct(product);
       setIsVisible(true);
     }
+
+    // Listen for custom event when product is selected
+    const handleProductSelected = (event: CustomEvent) => {
+      setSelectedProduct(event.detail.productKey);
+      setIsVisible(true);
+    };
+
+    // Listen for storage changes
+    const handleStorageChange = () => {
+      const product = sessionStorage.getItem('selectedProduct');
+      if (product) {
+        setSelectedProduct(product);
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('productSelected', handleProductSelected as EventListener);
+    window.addEventListener('storage', handleStorageChange);
+
+    return () => {
+      window.removeEventListener('productSelected', handleProductSelected as EventListener);
+      window.removeEventListener('storage', handleStorageChange);
+    };
   }, []);
 
   const handleUpsellChoice = (includeUpsell: boolean) => {

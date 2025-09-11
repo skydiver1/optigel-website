@@ -51,10 +51,19 @@ export default function PricingSection() {
   const handlePurchase = (productKey: string) => {
     // Store the selected product and show the upsell section
     sessionStorage.setItem('selectedProduct', productKey);
-    const upsellSection = document.getElementById('upsell');
-    if (upsellSection) {
-      upsellSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    
+    // Dispatch custom event to trigger upsell visibility
+    window.dispatchEvent(new CustomEvent('productSelected', { 
+      detail: { productKey } 
+    }));
+    
+    // Small delay to allow the upsell section to render before scrolling
+    setTimeout(() => {
+      const upsellSection = document.getElementById('upsell');
+      if (upsellSection) {
+        upsellSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
