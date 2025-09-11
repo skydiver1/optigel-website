@@ -12,6 +12,7 @@ interface Testimonial {
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const testimonials: Testimonial[] = [
     {
@@ -52,17 +53,30 @@ export default function TestimonialsSection() {
     }
   ];
 
+  const itemsPerSlide = isMobile ? 1 : 3;
+
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
-      prevIndex === testimonials.length - 3 ? 0 : prevIndex + 1
+      prevIndex === testimonials.length - itemsPerSlide ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? testimonials.length - 3 : prevIndex - 1
+      prevIndex === 0 ? testimonials.length - itemsPerSlide : prevIndex - 1
     );
   };
+
+  // Check if mobile on mount and resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Auto-rotate carousel
   useEffect(() => {
@@ -71,7 +85,7 @@ export default function TestimonialsSection() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [itemsPerSlide]);
 
   return (
     <section id="reviews" className="bg-gray-100 py-12 md:py-16">
@@ -109,10 +123,10 @@ export default function TestimonialsSection() {
           <div className="overflow-hidden mx-8">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerSlide)}%)` }}
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-1/3 flex-shrink-0 px-3">
+                <div key={index} className={`${isMobile ? 'w-full' : 'w-1/3'} flex-shrink-0 px-3`}>
                   <div className="bg-white rounded-lg p-6 shadow-sm h-full">
                     {/* Customer Avatar */}
                     <div className="flex items-center mb-4">
@@ -159,7 +173,7 @@ export default function TestimonialsSection() {
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-6 space-x-2">
-            {Array.from({ length: testimonials.length - 2 }, (_, index) => (
+            {Array.from({ length: testimonials.length - itemsPerSlide + 1 }, (_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}

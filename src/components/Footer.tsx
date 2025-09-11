@@ -123,8 +123,7 @@ export default function Footer() {
           {/* Medical disclaimer */}
           <div className="mt-8 text-xs text-gray-500 text-center max-w-4xl mx-auto">
             <p>
-              * These statements have not been evaluated by the MHRA. This product is not intended to diagnose, treat, cure, or prevent any disease. 
-              Individual results may vary. Consult with a healthcare professional before use if you have any medical conditions or are taking medications. 
+               Consult with a healthcare professional before use if you have any medical conditions or are taking medications. 
               Not recommended for children under 12, pregnant or breastfeeding women without medical supervision.
             </p>
           </div>

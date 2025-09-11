@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section className="bg-white py-8 md:py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Left content - exactly matching ArthroGel */}
           <div className="space-y-4">
             <h1 className="font-bold leading-tight text-black mb-4">
@@ -31,18 +31,17 @@ export default function HeroSection() {
           </div>
 
           {/* Right content - GET OPTI-15 GEL box exactly like ArthroGel */}
-          <div className="relative max-w-sm mx-auto lg:mx-0">
-            <div className="bg-gray-100 p-6 rounded-lg">
+          <div className="relative w-full md:max-w-sm mx-auto md:mx-0">
+            <div className="bg-gray-100 p-4 md:p-6 rounded-lg">
               <div className="text-center">
                 {/* Product video */}
                 <div className="mb-4">
                   <video 
-                    className="w-full h-auto rounded object-contain mx-auto"
+                    className="w-full h-auto rounded object-contain mx-auto max-w-none md:max-w-xs"
                     autoPlay
                     muted
                     loop
                     playsInline
-                    style={{ maxWidth: '400px', maxHeight: '300px' }}
                   >
                     <source src="/e83f08302dda43ed9598ecc8ac9c42a4.mp4" type="video/mp4" />
                     Your browser does not support the video tag.

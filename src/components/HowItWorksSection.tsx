@@ -58,11 +58,11 @@ export default function HowItWorksSection() {
             <div className="bg-gray-100 rounded-lg p-6">
               <div className="bg-white rounded-lg shadow-lg flex items-center justify-center p-6">
                 <Image
-                  src="/01_3014.jpg"
-                  alt="Opti-15 Gel Tube"
+                  src="/1755817051.png"
+                  alt="Opti-15 Gel"
                   width={400}
-                  height={500}
-                  className="object-contain"
+                  height={400}
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>

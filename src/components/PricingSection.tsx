@@ -84,7 +84,7 @@ export default function PricingSection() {
         </div>
 
         {/* Pricing Cards - Much more attractive */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-12 md:gap-6 max-w-5xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <div 
               key={tier.id}
@@ -118,34 +118,40 @@ export default function PricingSection() {
                 {/* Product visualization - Enhanced */}
                 <div className="relative mb-6">
                   {tier.tubes === 1 ? (
-                    <div className="mx-auto mb-3 flex items-center justify-center" style={{ height: '200px' }}>
-                      <Image
-                        src="/01_3014.jpg"
-                        alt="Opti-15 Gel Tube"
-                        width={160}
-                        height={200}
-                        className="object-contain"
-                      />
+                    <div className="mx-auto mb-3 flex items-center justify-center w-40 h-40">
+                      <div className="w-40 h-40 rounded-full bg-white shadow-md border-2 border-gray-300 overflow-hidden flex items-center justify-center">
+                        <Image
+                          src="/01_3014.jpg"
+                          alt="Opti-15 Gel Tube"
+                          width={120}
+                          height={150}
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
                   ) : tier.tubes === 3 ? (
-                    <div className="mx-auto mb-3 flex items-center justify-center" style={{ height: '200px' }}>
-                      <Image
-                        src="/3pack.png"
-                        alt="Opti-15 Gel 3-Pack"
-                        width={160}
-                        height={200}
-                        className="object-contain"
-                      />
+                    <div className="mx-auto mb-3 flex items-center justify-center w-40 h-40">
+                      <div className="w-40 h-40 rounded-full bg-white shadow-md border-2 border-gray-300 overflow-hidden flex items-center justify-center">
+                        <Image
+                          src="/3pack.png"
+                          alt="Opti-15 Gel 3-Pack"
+                          width={120}
+                          height={150}
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
                   ) : tier.tubes === 6 ? (
-                    <div className="mx-auto mb-3 flex items-center justify-center" style={{ height: '200px' }}>
-                      <Image
-                        src="/6pack.png"
-                        alt="Opti-15 Gel 6-Pack"
-                        width={180}
-                        height={200}
-                        className="object-contain"
-                      />
+                    <div className="mx-auto mb-3 flex items-center justify-center w-40 h-40">
+                      <div className="w-40 h-40 rounded-full bg-white shadow-md border-2 border-gray-300 overflow-hidden flex items-center justify-center">
+                        <Image
+                          src="/6pack.png"
+                          alt="Opti-15 Gel 6-Pack"
+                          width={130}
+                          height={150}
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
                   ) : (
                     <div className="w-24 h-28 bg-gradient-to-b from-red-100 to-red-200 rounded-xl mx-auto mb-3 flex items-center justify-center shadow-md">
