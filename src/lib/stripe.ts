@@ -29,7 +29,7 @@ export const products = {
     priceId: process.env.STRIPE_PRICE_ID_TRIPLE!,
     description: 'Most popular option - perfect for extended relief'
   },
-  sixPack: {
+  'six-pack': {
     name: 'Opti-15 Gel - Six Pack (Buy 3, Get 3 FREE)',
     tubes: 6,
     originalPrice: 119.70,
@@ -37,7 +37,7 @@ export const products = {
     priceId: process.env.STRIPE_PRICE_ID_SIX_PACK!,
     description: 'Best value - maximum savings for long-term comfort'
   },
-  cbdPatches: {
+  'cbd-patches': {
     name: 'High Strength (16mg) CBD Patches - 18 days supply',
     quantity: 18,
     originalPrice: 29.95,

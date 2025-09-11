@@ -64,8 +64,34 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ sessionId: session.id });
   } catch (error) {
     console.error('Error creating checkout session:', error);
+    
+    // Provide more specific error information
+    let errorMessage = 'Internal Server Error';
+    let errorDetails = '';
+    
+    if (error instanceof Error) {
+      errorMessage = error.message;
+      errorDetails = error.name;
+      
+      // Check for common Stripe errors
+      if (errorMessage.includes('No such price')) {
+        errorMessage = 'Invalid price ID - please check Stripe configuration';
+      } else if (errorMessage.includes('API key')) {
+        errorMessage = 'Invalid Stripe API key - please check environment variables';
+      }
+    }
+    
     return NextResponse.json(
-      { error: 'Internal Server Error' },
+      { 
+        error: errorMessage,
+        details: errorDetails,
+        // Include environment check for debugging (only in development)
+        debug: process.env.NODE_ENV === 'development' ? {
+          hasSecretKey: !!process.env.STRIPE_SECRET_KEY,
+          hasPublishableKey: !!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
+          lineItems: lineItems
+        } : undefined
+      },
       { status: 500 }
     );
   }
