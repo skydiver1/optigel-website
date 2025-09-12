@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     }
     const mandrill = Mailchimp(apiKey);
 
-    // Email content for notification to info@medicaltechnologyltd.co.uk
+    // Email content for notification 
     const notificationEmailHtml = `
       <h2>New Contact Form Submission - Opti-15 Gel</h2>
       <p><strong>Name:</strong> ${name}</p>
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
         from_name: 'Opti-15 Gel Website',
         to: [
           {
-            email: 'info@medicaltechnologyltd.co.uk',
+            email: 'support@optigel.co.uk',
             name: 'Medical Technology Ltd',
             type: 'to'
           }

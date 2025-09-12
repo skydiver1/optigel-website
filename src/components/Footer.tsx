@@ -71,7 +71,7 @@ export default function Footer() {
                 </p>
               </div>
               <div>
-                <p>Email: info@medicaltechnologyltd.co.uk</p>
+                <p>Email: support@optigel.co.uk</p>
                 <p>Phone: 0800 470 0316</p>
               </div>
             </div>

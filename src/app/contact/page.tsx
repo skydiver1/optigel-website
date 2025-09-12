@@ -114,7 +114,7 @@ export default function ContactPage() {
                     <p className="text-gray-600">
                       Medical Technology Ltd<br />
                       Express Park, Southampton<br />
-                      London, UK<br />
+                      Hampshire, UK<br />
                       SO14 0HH
                     </p>
                   </div>
