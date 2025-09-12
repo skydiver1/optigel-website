@@ -23,25 +23,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Hero images */}
-            <div className="mt-6 mb-6 hidden lg:block">
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/01_3014.jpg"
-                  alt="Opti-15 Gel in action"
-                  width={256}
-                  height={256}
-                  className="w-64 h-64 object-contain rounded-lg shadow-lg"
-                />
-                <Image
-                  src="/opt15-50.jpg"
-                  alt="Opti-15 Gel Brand"
-                  width={256}
-                  height={256}
-                  className="w-64 h-64 object-contain rounded-lg shadow-lg p-8"
-                />
-              </div>
-            </div>
+            
 
             <div className="mt-6">
               <a href="#pricing" className="btn-primary text-center inline-block text-sm px-6 py-3">
@@ -63,7 +45,7 @@ export default function HeroSection() {
                     loop
                     playsInline
                   >
-                    <source src="/e83f08302dda43ed9598ecc8ac9c42a4.mp4" type="video/mp4" />
+                    <source src="/hero-vid.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
