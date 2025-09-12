@@ -20,7 +20,8 @@
       "Bash(xxd:*)",
       "Bash(grep:*)",
       "mcp__ide__executeCode",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(npm uninstall:*)"
     ],
     "deny": [],
     "ask": []
