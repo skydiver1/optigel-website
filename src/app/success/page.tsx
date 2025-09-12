@@ -4,6 +4,13 @@ import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
+// Declare fbq for TypeScript
+declare global {
+  interface Window {
+    fbq: (action: string, event: string, data?: any) => void;
+  }
+}
+
 interface OrderDetails {
   sessionId: string;
   customerEmail: string;
@@ -31,6 +38,11 @@ function SuccessContent() {
           paymentStatus: 'paid'
         });
         setLoading(false);
+        
+        // Track Facebook Pixel purchase event
+        if (typeof window !== 'undefined' && window.fbq) {
+          window.fbq('track', 'Purchase');
+        }
       }, 1000);
     }
   }, [sessionId]);
