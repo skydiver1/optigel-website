@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Assistant } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const assistant = Assistant({
@@ -75,6 +76,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${assistant.variable} font-assistant antialiased`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SXD1SN8Q2K"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SXD1SN8Q2K');
+          `}
+        </Script>
         {children}
       </body>
     </html>

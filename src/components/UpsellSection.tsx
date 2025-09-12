@@ -58,7 +58,7 @@ export default function UpsellSection() {
                   alt="High Strength CBD Patches"
                   width={300}
                   height={400}
-                  className="object-contain rounded-lg shadow-lg"
+                  className="object-contain rounded-lg "
                 />
               </div>
             </div>

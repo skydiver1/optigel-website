@@ -23,15 +23,24 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Hero image */}
+            {/* Hero images */}
             <div className="mt-6 mb-6 hidden lg:block">
-              <Image
-                src="/01_3014.jpg"
-                alt="Opti-15 Gel in action"
-                width={200}
-                height={150}
-                className="w-48 rounded-lg shadow-lg"
-              />
+              <div className="flex items-center space-x-4">
+                <Image
+                  src="/01_3014.jpg"
+                  alt="Opti-15 Gel in action"
+                  width={256}
+                  height={256}
+                  className="w-64 h-64 object-contain rounded-lg shadow-lg"
+                />
+                <Image
+                  src="/opt15-50.jpg"
+                  alt="Opti-15 Gel Brand"
+                  width={256}
+                  height={256}
+                  className="w-64 h-64 object-contain rounded-lg shadow-lg p-8"
+                />
+              </div>
             </div>
 
             <div className="mt-6">
