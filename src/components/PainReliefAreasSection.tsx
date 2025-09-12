@@ -13,7 +13,7 @@ export default function PainReliefAreasSection() {
                 loop
                 playsInline
               >
-                <source src="/knee-rub.mp4" type="video/mp4" />
+                <source src="/e83f08302dda43ed9598ecc8ac9c42a4.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
