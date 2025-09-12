@@ -56,7 +56,7 @@ export default function HowItWorksSection() {
           {/* Right content - Product image */}
           <div className="relative">
             <div className="bg-gray-100 rounded-lg p-6">
-              <div className="bg-white rounded-lg shadow-lg flex items-center justify-center p-6">
+              <div className="bg-white rounded-lg flex items-center justify-center p-1">
                 <Image
                   src="/1755817051.png"
                   alt="Opti-15 Gel"
