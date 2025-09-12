@@ -106,7 +106,7 @@ export default function PricingSection() {
               {/* Popular badge - Enhanced */}
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-2 rounded-full text-xs font-bold shadow-lg">
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                     ⭐MOST POPULAR⭐
                   </div>
                 </div>
