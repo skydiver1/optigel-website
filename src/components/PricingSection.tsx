@@ -26,7 +26,7 @@ const pricingTiers: PricingTier[] = [
   },
   {
     id: 'single',
-    name: 'Opti-15 Gel - Single Trial - 200ml',
+    name: 'Opti-15 Gel - Single Tube - 200ml',
     tubes: 1,
     originalPrice: 24.95,
     salePrice: 19.95,
