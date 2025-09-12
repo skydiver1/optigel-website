@@ -106,15 +106,15 @@ export default function PricingSection() {
               {/* Popular badge - Enhanced */}
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
-                    ⭐ MOST POPULAR ⭐
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-2 rounded-full text-xs font-bold shadow-lg">
+                    ⭐MOST POPULAR⭐
                   </div>
                 </div>
               )}
 
               {/* Savings Badge */}
               {tier.savings && (
-                <div className="absolute -top-2 -right-2">
+                <div className="absolute -top-2 -right-4">
                   <div className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-bounce">
                     {tier.savings}
                   </div>
