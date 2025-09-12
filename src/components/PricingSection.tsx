@@ -16,8 +16,17 @@ interface PricingTier {
 
 const pricingTiers: PricingTier[] = [
   {
+    id: 'small',
+    name: 'Small Gel - Trial Size - 50ml',
+    tubes: 0.5, // Half size tube
+    originalPrice: 14.95,
+    salePrice: 9.95,
+    savings: 'Save £5.00',
+    priceId: 'price_small_gel'
+  },
+  {
     id: 'single',
-    name: '1 - Opti-15 Gel - Single Trial',
+    name: 'Opti-15 Gel - Single Trial - 200ml',
     tubes: 1,
     originalPrice: 24.95,
     salePrice: 19.95,
@@ -26,7 +35,7 @@ const pricingTiers: PricingTier[] = [
   },
   {
     id: 'triple',
-    name: '2 - Buy 2 Get 1 FREE',
+    name: 'Buy 2 Get 1 FREE',
     tubes: 3,
     originalPrice: 74.85,
     salePrice: 37.45,
@@ -36,7 +45,7 @@ const pricingTiers: PricingTier[] = [
   },
   {
     id: 'six-pack',
-    name: '3 - Buy 3 Get 3 FREE',
+    name: 'Buy 3 Get 3 FREE',
     tubes: 6,
     originalPrice: 149.70,
     salePrice: 59.70,
@@ -84,7 +93,7 @@ export default function PricingSection() {
         </div>
 
         {/* Pricing Cards - Much more attractive */}
-        <div className="grid md:grid-cols-3 gap-12 md:gap-10 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 max-w-7xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <div 
               key={tier.id}
@@ -117,7 +126,19 @@ export default function PricingSection() {
                 
                 {/* Product visualization - Enhanced */}
                 <div className="relative mb-6">
-                  {tier.tubes === 1 ? (
+                  {tier.tubes === 0.5 ? (
+                    <div className="mx-auto mb-3 flex items-center justify-center w-40 h-40">
+                      <div className="w-40 h-40 rounded-full bg-white shadow-md border-2 border-gray-300 overflow-hidden flex items-center justify-center">
+                        <Image
+                          src="/brand.png"
+                          alt="Opti-15 Small Gel"
+                          width={100}
+                          height={120}
+                          className="object-contain"
+                        />
+                      </div>
+                    </div>
+                  ) : tier.tubes === 1 ? (
                     <div className="mx-auto mb-3 flex items-center justify-center w-40 h-40">
                       <div className="w-40 h-40 rounded-full bg-white shadow-md border-2 border-gray-300 overflow-hidden flex items-center justify-center">
                         <Image
@@ -192,7 +213,7 @@ export default function PricingSection() {
                     </div>
                   )}
                   <div className="text-xs text-gray-500 mt-2">
-                    Per tube: £{(tier.salePrice / tier.tubes).toFixed(2)}
+                    {tier.tubes === 0.5 ? 'Trial sized' : `Per tube: £${(tier.salePrice / tier.tubes).toFixed(2)}`}
                   </div>
                 </div>
 
