@@ -66,7 +66,7 @@ export default function Footer() {
                 <p className="font-semibold text-white">Medical Technology Ltd</p>
                 <p className="text-sm">
                   Express Park, Southampton<br />
-                  London, UK<br />
+                  Hampshire, UK<br />
                   SO14 0HH
                 </p>
               </div>
