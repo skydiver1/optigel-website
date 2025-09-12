@@ -14,7 +14,14 @@ export async function POST(request: NextRequest) {
     }
 
     // Initialize Mandrill
-    const mandrill = Mailchimp(process.env.MANDRILL_API_KEY);
+    const apiKey = process.env.MANDRILL_API_KEY;
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+    const mandrill = Mailchimp(apiKey);
 
     // Email content for notification to info@medicaltechnologyltd.co.uk
     const notificationEmailHtml = `
