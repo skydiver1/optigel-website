@@ -7,6 +7,14 @@ export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 
 // Product configuration matching ArthroGel structure
 export const products = {
+  small: {
+    name: 'Opti-15 Gel - Small Trial (50ml)',
+    tubes: 0.5,
+    originalPrice: 14.95,
+    salePrice: 9.95,
+    priceId: process.env.STRIPE_PRICE_ID_SMALL!,
+    description: 'Perfect trial size - try Opti-15 Gel risk-free'
+  },
   single: {
     name: 'Opti-15 Gel - Single Tube',
     tubes: 1,

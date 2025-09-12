@@ -22,7 +22,7 @@ const pricingTiers: PricingTier[] = [
     originalPrice: 14.95,
     salePrice: 9.95,
     savings: 'Save £5.00',
-    priceId: 'price_small_gel'
+    priceId: 'price_1RRBBFJIj1H8x0NCozdnTgeV'
   },
   {
     id: 'single',

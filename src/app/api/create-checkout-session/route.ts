@@ -15,6 +15,7 @@ export async function POST(request: NextRequest) {
       hasSecretKey: !!process.env.STRIPE_SECRET_KEY,
       hasPublishableKey: !!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
       priceIds: {
+        small: process.env.STRIPE_PRICE_ID_SMALL,
         single: process.env.STRIPE_PRICE_ID_SINGLE,
         triple: process.env.STRIPE_PRICE_ID_TRIPLE,
         sixPack: process.env.STRIPE_PRICE_ID_SIX_PACK,

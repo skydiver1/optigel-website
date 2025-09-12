@@ -24,6 +24,14 @@ function CartContent() {
 
     // Product mapping based on the pricing tiers - using hardcoded values for client-side
     const productMap: { [key: string]: CartItem } = {
+      small: {
+        id: 'small',
+        name: 'Small Gel - Trial Size - 50ml',
+        price: 9.95,
+        originalPrice: 14.95,
+        image: '/brand.png',
+        priceId: 'price_1RRBBFJIj1H8x0NCozdnTgeV'
+      },
       single: {
         id: 'single',
         name: '1 - Opti-15 Gel - Single Trial',
