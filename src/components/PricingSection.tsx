@@ -84,13 +84,13 @@ export default function PricingSection() {
         </div>
 
         {/* Pricing Cards - Much more attractive */}
-        <div className="grid md:grid-cols-3 gap-12 md:gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-12 md:gap-10 max-w-5xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <div 
               key={tier.id}
-              className={`bg-white border-2 rounded-2xl p-6 text-center relative transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ${
+              className={`bg-white border-2 rounded-2xl p-6 text-center relative transform hover:scale-102 transition-all duration-300 shadow-lg hover:shadow-xl ${
                 tier.popular 
-                  ? 'border-green-500 bg-gradient-to-b from-green-50 to-white ring-4 ring-green-200 scale-105' 
+                  ? 'border-green-500 bg-gradient-to-b from-green-50 to-white ring-4 ring-green-200' 
                   : 'border-gray-200 hover:border-red-300'
               }`}
             >

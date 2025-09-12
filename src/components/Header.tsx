@@ -14,11 +14,12 @@ export default function Header() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-center">
             {/* Logo - exactly like ArthroGel */}
-            <div className="flex items-center">
+            <div className="flex flex-col items-center">
               <Link href="/" className="flex items-center">
                 <span className="text-3xl font-bold text-black">Opti-15</span>
                 <span className="text-3xl font-bold text-red-600 ml-1">Gel</span>
               </Link>
+              <span className="text-sm text-gray-600 mt-1">for tissue and joint massage</span>
             </div>
           </div>
         </div>

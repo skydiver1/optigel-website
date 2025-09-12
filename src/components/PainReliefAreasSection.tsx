@@ -1,7 +1,7 @@
 export default function PainReliefAreasSection() {
   return (
     <section className="bg-gray-100 py-16 md:py-20">
-      <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content - Video */}
           <div className="relative">
