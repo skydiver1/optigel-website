@@ -21,7 +21,11 @@
       "Bash(grep:*)",
       "mcp__ide__executeCode",
       "Bash(python:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(mcp add:*)",
+      "Bash(npx playwright:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp:*)"
     ],
     "deny": [],
     "ask": []

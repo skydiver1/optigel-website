@@ -1,0 +1,1 @@
+- @.claude\ website-design-reviewer check the home page of the website and suggest changes based on the design principles in context/design-principles
